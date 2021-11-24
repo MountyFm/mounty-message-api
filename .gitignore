@@ -3,6 +3,3 @@
 *.worksheet.sc
 *.class
 target/
-/.bsp/
-/.idea/
-/target/
