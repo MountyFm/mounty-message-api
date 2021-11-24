@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="sbt: kz.mounty:mounty-domain_2.12:0.1.1-SNAPSHOT:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/local/kz.mounty/mounty-domain_2.12/0.1.1-SNAPSHOT/jars/mounty-domain_2.12.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.ivy2/local/kz.mounty/mounty-domain_2.12/0.1.1-SNAPSHOT/docs/mounty-domain_2.12-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/local/kz.mounty/mounty-domain_2.12/0.1.1-SNAPSHOT/srcs/mounty-domain_2.12-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
