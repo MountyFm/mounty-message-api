@@ -7,9 +7,9 @@ import akka.util.{ByteString, Timeout}
 import com.typesafe.config.{Config, ConfigFactory}
 import kz.mounty.fm.api.RoomChatRoutes
 import kz.mounty.fm.domain.chat.RoomMessage
+import kz.mounty.fm.serializers.JodaCodec
 import kz.mounty.fm.serializers.Serializers
 import kz.mounty.fm.service.RoomChatService
-import kz.mounty.fm.util.JodaCodec
 import org.bson.codecs.configuration.CodecRegistries
 import org.bson.codecs.configuration.CodecRegistries.{fromProviders, fromRegistries}
 import org.mongodb.scala._
@@ -29,7 +29,7 @@ object Boot extends App with Serializers{
 
   val codecRegistry = fromRegistries(
     fromProviders(classOf[RoomMessage]),
-    CodecRegistries.fromCodecs(new JodaCodec),
+    CodecRegistries.fromCodecs(new JodaCodec()),
     DEFAULT_CODEC_REGISTRY)
 
   val client: MongoClient = MongoClient(config.getString("mongo.url"))
