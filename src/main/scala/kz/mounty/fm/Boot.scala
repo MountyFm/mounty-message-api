@@ -39,7 +39,7 @@ object Boot extends App with Serializers{
   implicit val collection: MongoCollection[RoomMessage] = db
     .getCollection[RoomMessage](config.getString("mongo.collection"))
 
-  implicit val roomChatService = new RoomChatService()
+  implicit val roomChatService: RoomChatService = new RoomChatService()
 
   val pingCounter = new AtomicInteger()
 
