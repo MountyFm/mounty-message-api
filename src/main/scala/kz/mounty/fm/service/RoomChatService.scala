@@ -40,7 +40,7 @@ class RoomChatService(implicit system: ActorSystem, formats: Formats, ex: Execut
         case TextMessage.Strict(msg) =>
           RoomMessageDTO.convert(parse(msg).extract[RoomMessageDTO])
       }
-      .mapAsync[RoomMessage](2)((roomMessage: RoomMessage) => roomMessageRepository.save(roomMessage))
+      .mapAsync[RoomMessage](2)((roomMessage: RoomMessage) => roomMessageRepository.create[RoomMessage](roomMessage))
       .via(chat.chatFlow)
       .map {
         msg: RoomMessage =>
