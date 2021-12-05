@@ -44,7 +44,7 @@ object Boot extends App with Serializers{
   val pingCounter = new AtomicInteger()
 
   val bindingFuture = Http()
-    .newServerAt("localhost", 8080)
+    .newServerAt("localhost", 8082)
     .adaptSettings(_.mapWebsocketSettings(_.withPeriodicKeepAliveData(() => ByteString(s"debug-${pingCounter.incrementAndGet()}"))))
     .bind(RoomChatRoutes.routes)
 

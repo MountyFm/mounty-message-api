@@ -21,4 +21,5 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-stream" % "2.6.17",
   "org.json4s" %% "json4s-jackson" % "4.0.3",
   "org.json4s" %% "json4s-native" % "4.0.3",
+  "ch.megard" %% "akka-http-cors" % "1.1.2"
 )
